@@ -6,7 +6,7 @@
  * @flow
  */
 
-import React, {Component} from 'react';
+import React, { PureComponent } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 import { Button, Container } from 'native-base';
 
@@ -18,7 +18,9 @@ const instructions = Platform.select({
 });
 
 type Props = {};
-export default class App extends Component<Props> {
+export default class App extends PureComponent<Props> {
+  static componentName = 'rnn.screens.welcome';
+
   render() {
     return (
       <Container>
